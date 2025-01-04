@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cylinder</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-neutral-200 h-screen w-full">
+    <main class="flex flex-col items-center justify-start h-full w-full p-8">
+    <div class="">
+        <table class="table-auto text-indigo-600 text-xl font-light">
+            <thead>
+                <tr>
+                <th class="px-0 py-2 text-lef</th>t pb-8">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">Model</span>
+                </th>
+                <th class="px-8 py-2 text-left pb-8 transition-transform duration-300" data-th-id="2">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">B1</span>
+                </th>
+                <th class="px-8 py-2 text-left pb-8 transition-transform duration-300" data-th-id="3">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">B2</span>
+                </th>
+                <th class="px-8 py-2 text-left pb-8 transition-transform duration-300" data-th-id="4">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">B3</span>
+                </th>
+                <th class="px-8 py-2 text-left pb-8 transition-transform duration-300" data-th-id="5">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">B4</span>
+                </th>
+                </tr>
+            </thead>
+            <tbody class="">
+                <tr class="">
+                    <td class="px-2 py-2 text-6xl h-32 relative cursor-pointer">o1
+                        <div class="h-10 w-10 absolute top-5 -left-3 text-yellow-400/0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+                            </svg>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2" >
+                        <div class="relative flex flex-col items-center mb-16">
+                            <div class="relative flex flex-col items-center transition-transform duration-300" data-th-id="2"> 
+                                <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                                <span class="ml-1 text-base text-neutral-500/80 font-light">88.5%</span>
+                                <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                            </div>
+                            <div class="absolute w-[75px] border-t-8 border-dotted border-violet-500/20 -right-[70px] top-[24px] -rotate-[4deg]"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2" >
+                        <div class="relative flex flex-col items-center mb-20">
+                            <div class="relative flex flex-col items-center transition-transform duration-300" data-th-id="3">
+                                <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                                <span class="ml-1 text-base text-purple-500/80 font-light">91.0%</span>
+                                <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                            </div>
+                            <div class="absolute w-[75px] border-t-8 border-dotted border-violet-500/20 -right-[70px] top-[35px] rotate-[4deg]"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2" >
+                        <div class="relative flex flex-col items-center mb-12">
+                            <div class="relative flex flex-col items-center transition-transform duration-300" data-th-id="4">
+                                <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                                <span class="ml-1 text-base text-neutral-500/80 font-light">50.3%</span>
+                                <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                            </div>
+                            <div class="absolute w-[75px] border-t-8 border-dotted border-violet-500/20 -right-[70px] top-[33px] rotate-[4deg]"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2" >
+                        <div class="relative flex flex-col items-center mb-8">
+                            <div class="relative flex flex-col items-center transition-transform duration-300" data-th-id="5">
+                                <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                                <span class="ml-1 text-base text-neutral-500/80 font-light">45.1%</span>
+                                <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script>
+            document.querySelectorAll('[data-th-id]').forEach(element => {
+                element.addEventListener('mouseenter', () => {
+                    const thId = element.getAttribute('data-th-id');
+                    const elements = document.querySelectorAll(`[data-th-id="${thId}"]`);
+                    elements.forEach(el => {
+                        el.classList.add('scale-125');
+                    });
+                });
+        
+                element.addEventListener('mouseleave', () => {
+                    const thId = element.getAttribute('data-th-id');
+                    const elements = document.querySelectorAll(`[data-th-id="${thId}"]`);
+                    elements.forEach(el => {
+                        el.classList.remove('scale-125');
+                    });
+                });
+            });
+        </script>
+    </div>
+    </main>
+</body>
+</html>

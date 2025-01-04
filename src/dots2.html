@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cylinder</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-neutral-200 h-screen w-full">
+    <main class="flex flex-col justify-start items-center h-full w-full p-8">
+        <div class="max-w-5xl">
+            <div class="flex">
+                <div class="w-16 h-16 bg-neutral-300 mr-4 flex items-center justify-center">
+                    <div class="w-8 h-8 bg-neutral-400">
+                    </div>
+                </div>
+                <h1 class="text-6xl text-neutral-800/40 font-extralight">Gemini-Exp</h1>
+            </div>
+            <div class="w-full bg-neutral-300/30 mt-5 flex items-center justify-center">
+                <div class="w-[900px] h-[500px] ml-30 flex justify-start items-end relative font-extralight font-mono">
+                    <div class="absolute top-4 -right-44">
+                        <div class="flex items-center">
+                            <div class="bg-red-400/40 w-8 h-8 rounded-full flex items-center justify-center mr-3 my-2">
+                                <div class="bg-red-800/40 w-4 h-4 rounded-full"></div>
+                            </div>
+                            <span class="text-red-800/60 text-3xl cursor-pointer">o1</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-400/40 w-8 h-8 rounded-full flex items-center justify-center mr-3 my-2">
+                                <div class="bg-purple-800/40 w-4 h-4 rounded-full"></div>
+                            </div>
+                            <span class="text-purple-800/60 text-3xl cursor-pointer">Gemini</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-green-400/40 w-8 h-8 rounded-full flex items-center justify-center mr-3 my-2">
+                                <div class="bg-green-800/40 w-4 h-4 rounded-full"></div>
+                            </div>
+                            <span class="text-green-800/60 text-3xl cursor-pointer">Sonnet</span>
+                        </div>
+                    </div>
+                    <div class="h-full w-[50px] bg-neutral-400/50 rounded-3xl relative">
+                        <div class="flex flex-col h-5/6 justify-around mt-4 ml-2 font-normal text-neutral-100">
+                            <span>100</span>
+                            <span>90</span>
+                            <span>80</span>
+                            <span>70</span>
+                            <span>60</span>
+                            <span>50</span>
+                            <span>40</span>
+                            <span>30</span>
+                            <span>20</span>
+                            <span>10</span>
+                        </div>
+                        <div class="flex flex-col h-5/6 justify-around absolute -left-9 top-4">
+                            <span>100</span>
+                            <span>90</span>
+                            <span>80</span>
+                            <span>70</span>
+                            <span>60</span>
+                            <span>50</span>
+                            <span>40</span>
+                            <span>30</span>
+                            <span>20</span>
+                            <span>10</span>
+                        </div>
+                        <div class="bg-red-500/20 right-0 w-[10px] h-[4px] top-14 absolute"></div>
+                        <div class="bg-red-500/20 right-0 w-[10px] h-[4px] top-32 absolute"></div>
+                        <div class="bg-red-500/20 right-0 w-[10px] h-[4px] top-44 absolute"></div>
+                        <div class="bg-red-500/20 right-0 w-[10px] h-[4px] bottom-32 absolute"></div>
+                    </div>
+                    <div class="w-full h-[50px] bg-neutral-400/50 rounded-3xl absolute"></div>
+                    <div>
+                        <div class="absolute flex items-center top-10 left-20">
+                            <div class="w-10 h-10 bg-red-400/40 rounded-full flex items-center justify-center">
+                                <div class="bg-red-800/40 w-4 h-4 rounded-full"></div>
+                            </div>
+                            <div class="text-neutral-600/60 ml-1 text-sm">93%</div>
+                        </div>
+                        <div class="absolute flex items-center top-28 left-80">
+                            <div class="w-10 h-10 bg-red-400/40 rounded-full flex items-center justify-center">
+                                <div class="bg-red-800/40 w-4 h-4 rounded-full"></div>
+                            </div>
+                            <div class="text-neutral-600/60 ml-1 text-sm">78%</div>
+                        </div>
+                        <svg class="absolute top-0 left-0 w-full h-full pointer-events-none -z-10">
+                            <line x1="100" y1="60" x2="340" y2="132" stroke="rgba(255, 0, 0, 0.1)" stroke-width="15"/>
+                        </svg>
+                        <div class="absolute flex items-center top-40 right-80">
+                            <div class="w-10 h-10 bg-red-400/40 rounded-full flex items-center justify-center">
+                                <div class="bg-red-800/40 w-4 h-4 rounded-full"></div>
+                            </div>
+                            <div class="text-neutral-600/60 ml-1 text-sm">68%</div>
+                        </div>
+                        <svg class="absolute top-0 left-0 w-full h-full pointer-events-none -z-10">
+                            <line x1="350" y1="132" x2="540" y2="182" stroke="rgba(255, 0, 0, 0.1)" stroke-width="15"/>
+                        </svg>
+                        <div class="absolute flex items-center bottom-32 right-10">
+                            <div class="w-10 h-10 bg-red-400/40 rounded-full flex items-center justify-center">
+                                <div class="bg-red-800/40 w-4 h-4 rounded-full"></div>
+                            </div>
+                            <div class="text-neutral-600/60 ml-1 text-sm">23%</div>
+                        </div>
+                        <svg class="absolute top-0 left-0 w-full h-full pointer-events-none -z-10">
+                            <line x1="520" y1="168" x2="820" y2="360" stroke="rgba(255, 0, 0, 0.1)" stroke-width="15"/>
+                        </svg>
+
+                        <svg class="absolute top-14 left-0 w-full h-full pointer-events-none -z-10">
+                            <polygon points="100,10 350,82 540,132 820,310 820,400 100,400" fill="rgba(255, 0, 0, 0.05)"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gradient-to-t to-neutral-500/10 from-transparent w-[1770px] h-full trapezoid"></div>
+        <style>
+        .trapezoid {
+            clip-path: polygon(25% 0%, 75% 0%, 100% 100%, 0% 100%);
+        }
+        </style>
+    </main>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cylinder</title>
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        .blur-me {
+            --tw-blur: blur(1px);
+            filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+        }
+    </style>
+</head>
+<body class="bg-neutral-200 h-screen w-full">
+    <main class="flex flex-col items-center justify-start h-full w-full p-8">
+    <div class="">
+        <table class="table-auto text-indigo-600 text-xl font-light">
+            <thead>
+                <tr>
+                <th class="px-0 py-2 text-left pb-8">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">Model</span>
+                </th>
+                <th class="px-8 py-2 text-left pb-8">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">B1</span>
+                </th>
+                <th class="px-8 py-2 text-left pb-8">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">B2</span>
+                </th>
+                <th class="px-8 py-2 text-left pb-8">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">B3</span>
+                </th>
+                <th class="px-8 py-2 text-left pb-8">
+                    <span class="bg-neutral-300/50 rounded-lg p-3">B4</span>
+                </th>
+                </tr>
+            </thead>
+            <script>
+                let startTime;
+                document.addEventListener('mousedown', () => {
+                    startTime = new Date();
+                    blur();
+                });
+
+                document.addEventListener('mouseup', () => {
+                    const endTime = new Date();
+                    const pressTime = endTime - startTime;
+                    console.log(`Mouse was pressed for ${pressTime} milliseconds`);
+                    blur();
+                });
+
+                function blur() {
+                    const table = document.querySelector('tbody tr');
+                    let cells = table.querySelectorAll('td');
+                    cells.forEach((cell, index) => {
+                        if (index !== 2 && index != 0) {
+                            if (cell.classList.contains('blur-me')) {
+                                cell.classList.remove('blur-me');
+                            } else {
+                                cell.classList.add('blur-me');
+                            }
+                        }
+                    });
+                    let table2 = document.querySelector('thead tr');
+                    let headerCells = table2.querySelectorAll('th');
+                    headerCells.forEach((cell, index) => {
+                        if (index !== 2 && index != 0) {
+                            if (cell.classList.contains('blur-me')) {
+                                cell.classList.remove('blur-me');
+                            } else {
+                                cell.classList.add('blur-me');
+                            }
+                        }
+                    });
+                }
+            </script>
+            <tbody class="">
+                <tr class="">
+                    <td class="px-2 py-2 text-6xl h-32 relative cursor-pointer">o1
+                        <div class="h-10 w-10 absolute top-5 -left-3 text-yellow-400/0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+                            </svg>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mb-16">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-base text-neutral-500/80 font-light">88.5%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mb-20">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-base text-neutral-500/80 font-light">91.0%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mb-12">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-base text-neutral-500/80 font-light">50.3%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mb-8">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-base text-neutral-500/80 font-light">45.1%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </main>
+</body>
+</html>

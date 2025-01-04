@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cylinder</title>
+    <link href="./output.css" rel="stylesheet">
+</head>
+<body class="bg-neutral-200 h-screen w-full">
+    <main class="flex flex-col items-center justify-start h-full w-full p-8">
+    <div class="">
+        <table class="table-auto text-indigo-600 text-xl font-light">
+            <thead>
+                <tr>
+                <th class="px-0 py-2 text-left">
+                    <div class="bg-neutral-300/50 rounded-lg p-3 mt-52 w-fit">Model</div>
+                </th>
+                <th class="px-8 py-0 text-left pb-0">
+                    <div class="bg-neutral-300/50 rounded-lg p-3 mt-24 w-fit">B1</div>
+                </th>
+                <th class="px-8 py-0 text-left pb-0">
+                    <div class="bg-neutral-300/50 rounded-lg p-3 w-fit">B2</div>
+                </th>
+                <th class="px-8 py-0 text-left pb-0">
+                    <div class="bg-neutral-300/50 rounded-lg p-3 w-fit mb-24">B3</div>
+                </th>
+                <th class="px-8 py-0 text-left pb-0">
+                    <div class="bg-neutral-300/50 rounded-lg p-3 w-fit">B4</div>
+                </th>
+                <th class="px-8 py-0 text-left pb-0">
+                    <div class="bg-neutral-300/50 rounded-lg p-3 w-fit mt-24">B5</div>
+                </th>
+                <th class="px-8 py-0 text-left pb-0">
+                    <div class="bg-neutral-300/50 rounded-lg p-3 w-fit mt-52">B6</div>
+                </th>
+                </tr>
+            </thead>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    document.querySelectorAll('td').forEach(td => {
+                        td.addEventListener('mouseover', () => {
+                            console.log('hover');
+                            td.style.transform = 'scale(1.2)';
+                            td.style.transition = 'transform 0.3s';
+                        });
+                        td.addEventListener('mouseout', () => {
+                            td.style.transform = 'scale(1)';
+                        });
+                    });
+                    document.querySelectorAll('th').forEach(td => {
+                        td.addEventListener('mouseover', () => {
+                            console.log('hover');
+                            td.style.transform = 'scale(1.2)';
+                            td.style.transition = 'transform 0.3s';
+                        });
+                        td.addEventListener('mouseout', () => {
+                            td.style.transform = 'scale(1)';
+                        });
+                    });
+                });
+            </script>
+            <tbody class="">
+                <tr class="">
+                    <td class="px-2 py-2 text-7xl h-32 relative cursor-pointer">
+                        <div class="mt-52">o1</div>
+                        <div class="h-10 w-10 absolute top-5 -left-3 text-yellow-400/0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+                            </svg>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mb-0 mt-24">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-3xl text-neutral-500/80 font-light">88.5%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mb-0">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-2xl text-neutral-500/80 font-light">91.0%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mb-24">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-base text-neutral-500/80 font-light">50.3%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mb-0">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-2xl text-neutral-500/80 font-light">45.1%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mt-24">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-3xl text-neutral-500/80 font-light">91.0%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                    <td class="px-8 py-2">
+                        <div class="relative flex flex-col items-center mt-52">
+                            <div class="bg-purple-300/30 rounded-full w-8 h-8 absolute top-4"></div>
+                            <span class="ml-1 text-neutral-500/80 font-light text-4xl">50.3%</span>
+                            <div class="bg-purple-500/50 rounded-full w-4 h-4"></div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
